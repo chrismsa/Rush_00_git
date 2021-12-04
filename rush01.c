@@ -11,9 +11,9 @@ void    rush(int x, int y)
     char line_b;
     char space;
 
-    mid_c = 'B';
-    a_edge = 'A';
-    b_edge = 'C';
+    mid_c = '*';
+    a_edge = '/';
+    b_edge = '\\';
     line_b = '\n';
     space = ' ';
     if (x > 0 || y > 0)
@@ -22,7 +22,7 @@ void    rush(int x, int y)
         line(x, y, space, mid_c, line_b);
         if (y > 1)
         {
-            column(x, a_edge, b_edge, mid_c, line_b);
+            column(x, b_edge, a_edge, mid_c, line_b);
         }
     }
 }

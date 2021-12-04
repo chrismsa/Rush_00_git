@@ -18,11 +18,11 @@ void    rush(int x, int y)
     space = ' ';
     if (x > 0 || y > 0)
     {
-        column(x, a_edge, b_edge, mid_c, line_b);
+        column(x, a_edge, a_edge, mid_c, line_b);
         line(x, y, space, mid_c, line_b);
         if (y > 1)
         {
-            column(x, a_edge, b_edge, mid_c, line_b);
+            column(x, b_edge, b_edge, mid_c, line_b);
         }
     }
 }

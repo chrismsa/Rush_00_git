@@ -1,7 +1,7 @@
 
 void    ft_putchar(char c);
 void    column(int x, char a_edge, char b_edge, char mid_c, char line_b);
-void    line(int x, int y, char space, char mid_c, char line_b);
+void    line(int x, int y, char space, char line_b);
 
 void    rush(int x, int y)
 {
@@ -11,15 +11,15 @@ void    rush(int x, int y)
     char line_b;
     char space;
 
-    mid_c = 'B';
-    a_edge = 'A';
-    b_edge = 'C';
+    mid_c = '-';
+    a_edge = 'o';
+    b_edge = 'o';
     line_b = '\n';
     space = ' ';
     if (x > 0 || y > 0)
     {
         column(x, a_edge, b_edge, mid_c, line_b);
-        line(x, y, space, mid_c, line_b);
+        line(x, y, space, line_b);
         if (y > 1)
         {
             column(x, a_edge, b_edge, mid_c, line_b);
@@ -47,16 +47,18 @@ void    column(int x, char a_edge, char b_edge, char mid_c, char line_b)
 }
 
 // Cria a linha
-void    line(int x, int y, char space, char mid_c, char line_b)
+void    line(int x, int y, char space, char line_b)
 {
     int i;
+    char mid_p;
+    mid_p = '|';
 
     i = 0;
     if (y >= 2)
     {
         while (i < (y - 2))
         {
-            column(x, mid_c, mid_c, space, line_b);
+            column(x, mid_p, mid_p, space, line_b);
             i++;
         }
     }

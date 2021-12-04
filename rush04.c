@@ -22,7 +22,7 @@ void    rush(int x, int y)
         line(x, y, space, mid_c, line_b);
         if (y > 1)
         {
-            column(x, a_edge, b_edge, mid_c, line_b);
+            column(x, b_edge, a_edge, mid_c, line_b);
         }
     }
 }
