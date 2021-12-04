@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 void rush(int x, int y);
 
 int main()
@@ -7,3 +5,4 @@ int main()
   rush(5, 5);
   return (0);
 }
+
