@@ -1,44 +1,44 @@
-void    rush(int x, int y);
-void    ft_putchar(char c);
+void	rush(int x, int y);
+void	ft_putchar(char c);
+int	read_value(char *arg);
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
-    int x;
-    int y;
-    int i;
-    int num;
+	int x;
+	int y;
+	int i;
+	int num;
 
-    num = 0;
-    i = 0;
+	num = 0;
+	i = 0;
 
-    if (argc == 3)
-    {
-        while (argv[1][i] != '\0')
-        {
-            x = argv[1][i] - 48;
-            num = num * 10 + x;
-            if (x < 0 || x > 9)
-                return (0);
-            i++;
-        }
+	if (argc == 3)
+	{
+		x = read_value(argv[1]);
+		y = read_value(argv[2]);
+		rush(x, y);
+	}
 
-        x = num;
-        num = 0;
-        i = 0;
-
-        while (argv[2][i] != '\0')//'\0' Is the character that points the end of a string.
-        {
-            y = argv[2][i] - 48;
-            num = num * 10 + y;
-            if (y < 0 || y > 9)
-                return (0);
-            i++;
-        }
-
-        y = num;
-        rush(x, y);
-    }
-
-    return (0);
+	return (0);
 }
 
+int	read_value(char *arg)
+{
+	int value;
+	int number;
+	int i;
+
+	number = 0;
+	i = 0;
+	while (arg[i] != '\0')
+	{
+		value = arg[i] - 48;
+		number = number * 10 + value;
+		if (value < 0 || value > 9)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (number);
+}
