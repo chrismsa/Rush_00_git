@@ -41,8 +41,10 @@ void    column(int x, char a_edge, char b_edge, char mid_c, char line_b)
         ft_putchar(mid_c);
         i++;
     }
+
     ft_putchar(b_edge);
     }
+
     ft_putchar(line_b);
 }
 

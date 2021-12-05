@@ -1,59 +1,44 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-void rush(int x, int y);
+void    rush(int x, int y);
 void    ft_putchar(char c);
 
 int main(int argc, char *argv[])
 {
-  int x;
-  int y;
+    int x;
+    int y;
+    int i;
+    int num;
 
-  if (argc == 3)
-  {
-    x = (*argv[1] - 48);
-    y = (*argv[2] - 48);
+    num = 0;
+    i = 0;
 
-
-    if((x >= 0 && x <= 9) && (y >= 0 && y <= 9))
+    if (argc == 3)
     {
-      rush(x, y);
+        while (argv[1][i] != '\0')
+        {
+            x = argv[1][i] - 48;
+            num = num * 10 + x;
+            if (x < 0 || x > 9)
+                return (0);
+            i++;
+        }
+
+        x = num;
+        num = 0;
+        i = 0;
+
+        while (argv[2][i] != '\0')//'\0' Is the character that points the end of a string.
+        {
+            y = argv[2][i] - 48;
+            num = num * 10 + y;
+            if (y < 0 || y > 9)
+                return (0);
+            i++;
+        }
+
+        y = num;
+        rush(x, y);
     }
-  }
 
-  //printf("----------- 0, 0 -----------\n");
-  //rush(0, 0);
-
-  //printf("----------- 0, 1 -----------\n");
-  //rush(0, 1);
-
-  //printf("----------- 1, 0 -----------\n");
-  //rush(1, 0);
-
-  //printf("----------- 1, 1 -----------\n");
-  //rush(1, 1);
-
-  //printf("----------- 2, 2 -----------\n");
-  //rush(2, 2);
-
-  //printf("----------- 3, 3 -----------\n");
-  //rush(3, 3);
-
-  //printf("----------- 2, 1 -----------\n");
-  //rush(2, 1);
-
-  //printf("----------- 1, 2 -----------\n");
-  //rush(1, 2);
-
-  //printf("----------- 3, 1 -----------\n");
-  //rush(3, 1);
-
-  //printf("----------- 1, 3 -----------\n");
-  //rush(1, 3);
-
-  //printf("----------- 5, 5 -----------\n");
-  //rush(5, 5);
-
-  //printf("----------------------------\n");
-  return (0);
+    return (0);
 }
+
