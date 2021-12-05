@@ -16,7 +16,7 @@ void    rush(int x, int y)
     b_edge = '\\';
     line_b = '\n';
     space = ' ';
-    if (x > 0 || y > 0)
+    if (x > 0 && y > 0)
     {
         column(x, a_edge, b_edge, mid_c, line_b);
         line(x, y, space, mid_c, line_b);
