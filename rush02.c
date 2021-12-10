@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush03.c                                           :+:      :+:    :+:   */
+/*   rush02.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/05 22:28:32 by coder             #+#    #+#             */
-/*   Updated: 2021/12/05 22:40:17 by coder            ###   ########.fr       */
+/*   Created: 2021/12/05 22:28:24 by coder             #+#    #+#             */
+/*   Updated: 2021/12/05 22:40:09 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void	rush(int x, int y)
 	space = ' ';
 	if (x > 0 && y > 0)
 	{
-		column(x, a_edge, b_edge, mid_c);
+		column(x, a_edge, a_edge, mid_c);
 		line(x, y, space, mid_c);
 		if (y > 1)
 		{
-			column(x, a_edge, b_edge, mid_c);
+			column(x, b_edge, b_edge, mid_c);
 		}
 	}
 }
